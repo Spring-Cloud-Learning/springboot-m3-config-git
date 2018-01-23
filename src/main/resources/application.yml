@@ -1,0 +1,29 @@
+---
+server:
+  port: 3003
+security:
+  basic:
+    enabled: true
+  user:
+    name: sambit
+    password: Test123
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/Spring-Cloud-Learning/springcloud-m3-config
+          #username: mishrasambit
+          #password: Dec1986!04
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern:
+                - "*/perf"
+              uri: https://github.com/Spring-Cloud-Learning/springcloud-m3-config-perf
+              search-paths:
+                - 'station*'
+          
